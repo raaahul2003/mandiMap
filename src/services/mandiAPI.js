@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/mandis";
+const API_URL = "https://mandimap-backend.onrender.com/mandis";
 
 export async function getMandis() {
   const response = await axios.get(API_URL);

@@ -91,8 +91,8 @@ function Home() {
           <div className="hero-image">
 
             <img
-              src="https://images.unsplash.com/photo-1601050690597-df0568f70950"
-              alt="Mandi food"
+              src="/src/assets/hero-image.jpg"
+              alt="Mandi platter with sauces and condiments"
             />
 
             <div className="hero-floating-card">

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import {
   MapPin,
   Plus,
@@ -20,9 +20,24 @@ function Navbar() {
         </Link>
 
         <nav className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/explore">Explore</Link>
-          <Link to="/about">About</Link>
+          <NavLink
+            to="/"
+            className={({ isActive }) => isActive ? 'active' : ''}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/explore"
+            className={({ isActive }) => isActive ? 'active' : ''}
+          >
+            Explore
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => isActive ? 'active' : ''}
+          >
+            About
+          </NavLink>
         </nav>
 
         <div className="nav-actions">
