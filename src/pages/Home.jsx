@@ -11,6 +11,7 @@ import Navbar from "../compnents/Navbar";
 import { useEffect, useState } from "react";
 import { getMandis } from "../services/mandiAPI";
 import { districts } from "../data/mockData";
+import heroImage from "../assets/hero-image.jpg";
 
 
 function Home() {
@@ -91,7 +92,7 @@ function Home() {
           <div className="hero-image">
 
             <img
-              src="/src/assets/hero-image.jpg"
+              src={heroImage}
               alt="Mandi platter with sauces and condiments"
             />
 
