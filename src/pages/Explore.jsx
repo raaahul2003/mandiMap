@@ -226,7 +226,7 @@ function Explore() {
 
                                                 <span>
                                                     {count}{" "}
-                                                    {count === 1
+                                                    {count == 1
                                                         ? "Mandi"
                                                         : "Mandis"}
                                                 </span>

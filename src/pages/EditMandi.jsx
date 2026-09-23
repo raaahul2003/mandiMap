@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Save } from "lucide-react";
 
 import { getMandiById, updateMandi } from "../services/mandiAPI";
-import { districts, mandis } from "../data/mockData";
+import { districts } from "../data/mockData";
 import Navbar from "../compnents/Navbar";
 
 function EditMandi() {

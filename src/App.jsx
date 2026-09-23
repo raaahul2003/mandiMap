@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Admin from "./pages/Admin";
 import AdminDashboard from "./pages/AdminDashboard";
 import EditMandi from "./pages/EditMandi";
+import Pnf from "./pages/Pnf";
 
 function App() {
   return (
@@ -55,6 +56,8 @@ function App() {
         path="/admin/mandis/:id/edit"
         element={<EditMandi />}
       />
+
+      <Route path="*" element={<Pnf />} />
 
     </Routes>
   );

@@ -10,7 +10,6 @@ import {
 import Navbar from "../compnents/Navbar";
 import { useEffect, useState } from "react";
 import { getMandis } from "../services/mandiAPI";
-import { districts } from "../data/mockData";
 import heroImage from "../assets/hero-image.jpg";
 
 
@@ -18,8 +17,16 @@ function Home() {
   const [mandis, setMandis] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  console.log(mandis);
+  
 
-  const featuredMandis = mandis.slice(0, 4);
+  const featuredMandis = mandis.filter(mandi => (
+    mandi.rating>=4.7
+  ));
+  console.log(featuredMandis);
+
+  // const featuredMandis = mandis.slice(0,5);
+  
 
 
   useEffect(() => {
@@ -116,7 +123,7 @@ function Home() {
 
         {/* DISTRICTS */}
 
-        <section className="district-section">
+        {/* <section className="district-section">
 
           <div className="section-heading">
 
@@ -134,14 +141,6 @@ function Home() {
                 mandi restaurants near you.
               </p>
             </div>
-
-            <Link
-              to="/explore"
-              className="view-all"
-            >
-              View all
-              <ArrowRight size={16} />
-            </Link>
 
           </div>
 
@@ -168,7 +167,7 @@ function Home() {
 
           </div>
 
-        </section>
+        </section> */}
 
 
         {/* FEATURED MANDIS */}
@@ -205,58 +204,6 @@ function Home() {
           </div>
 
 
-          {/* <div  className="mandi-grid">
-
-            {featuredMandis.map((mandi) => (
-
-              <Link
-                key={mandi.id}
-                to={`/mandi/${mandi.id}`}
-                className="mandi-card"
-              >
-
-                <div className="mandi-image">
-
-                  <img
-                    src={mandi.image}
-                    alt={mandi.name}
-                  />
-
-                  <span className="rating">
-                    <Star size={13} fill="currentColor" />
-                    {mandi.rating}
-                  </span>
-
-                </div>
-
-                <div className="mandi-card-content">
-
-                  <h3>{mandi.name}</h3>
-
-                  <div className="location">
-                    <MapPin size={14} />
-                    {mandi.location}
-                  </div>
-
-                  <div className="mandi-meta">
-
-                    <span>
-                      {mandi.cuisine}
-                    </span>
-
-                    <span>
-                      {mandi.priceRange}
-                    </span>
-
-                  </div>
-
-                </div>
-
-              </Link>
-
-            ))}
-
-          </div> */}
 
           <div className="mandi-grid">
 
